@@ -15,7 +15,10 @@ pipeline {
 					sh 'sudo echo "Welcome to my EMPIRE" > index.html'
 					sh 'sudo cp index.html /var/www/html'
 				}	
-			}	
+			}
+
+			stage('Deploy') {
+			}
 		}	
 	}	
 }	
