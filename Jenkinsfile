@@ -1,9 +1,8 @@
 pipeline {
-	agent any {
-	
-	}
+	agent any
 
 	stages {
+	
 		stage('SCM') {
 			steps {
 				git 'https://github.com/SUNILKUMARKUMAWAT371/practice-jeknins.git'
@@ -20,7 +19,9 @@ pipeline {
 		}
 
 		stage('Deploy') {
-			sh 'echo Hi i am Deploy'
+			steps {
+				echo 'Hi i am Deploy !'
+			}
 		}
 	}		
 }	
