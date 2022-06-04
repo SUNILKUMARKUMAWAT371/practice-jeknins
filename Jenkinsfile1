@@ -1,0 +1,19 @@
+pipeline {
+
+	agent { 
+		label "slave-node"
+	}
+
+	stages {
+		stage('SCM') {
+			steps {
+				git 'https://github.com/SUNILKUMARKUMAWAT371/practice-jeknins.git'
+			}
+		}
+		stage('Build') {
+			steps {
+				sh 'date'
+			}
+		}
+	}
+}	
